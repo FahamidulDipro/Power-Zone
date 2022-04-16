@@ -5,11 +5,11 @@ import Navigation from "./components/Navigation/Navigation";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home";
-import Services from "./components/Services/Services";
 import Checkout from "./components/Checkout/Checkout";
 import About from "./components/About/About";
 import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
+import ServicesLoad from "./components/ServicesLoad/ServicesLoad";
 
 export const TrainerLoad = createContext();
 
@@ -28,7 +28,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/home" element={<Home></Home>}></Route>
-          <Route path="/services" element={<Services></Services>}></Route>
+          <Route
+            path="/services"
+            element={<ServicesLoad></ServicesLoad>}
+          ></Route>
           <Route path="/checkout" element={<Checkout></Checkout>}></Route>
           <Route path="/about" element={<About></About>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
