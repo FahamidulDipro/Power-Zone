@@ -29,6 +29,12 @@ const Navigation = () => {
               >
                 Checkout
               </NavLink>
+              <NavLink
+                to="/about"
+                className="text-decoration-none mx-3 text-light"
+              >
+                About
+              </NavLink>
             </Nav>
             <Nav>
               <NavLink
@@ -48,7 +54,6 @@ const Navigation = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <br />
     </>
   );
 };
