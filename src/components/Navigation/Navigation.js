@@ -30,37 +30,37 @@ const Navigation = () => {
           <Nav>
             <NavLink
               to="/home"
-              className="text-secondary mx-3 text-decoration-none fw-bold mt-1"
+              className="text-secondary mx-3 text-decoration-none fw-bold my-1"
             >
               Home
             </NavLink>
             <NavLink
               to="/services"
-              className="text-secondary mx-3 text-decoration-none fw-bold mt-1"
+              className="text-secondary mx-3 text-decoration-none fw-bold my-1"
             >
               Services
             </NavLink>
             <NavLink
               to="/checkout"
-              className="text-secondary mx-3 text-decoration-none fw-bold mt-1"
+              className="text-secondary mx-3 text-decoration-none fw-bold my-1"
             >
               Checkout
             </NavLink>
             <NavLink
               to="/blogs"
-              className="text-secondary mx-3 text-decoration-none fw-bold mt-1"
+              className="text-secondary mx-3 text-decoration-none fw-bold my-1"
             >
               Blogs
             </NavLink>
             <NavLink
               to="/about"
-              className="text-secondary mx-3 text-decoration-none fw-bold mt-1"
+              className="text-secondary mx-3 text-decoration-none fw-bold my-1"
             >
               About
             </NavLink>
             <NavLink
               to="/login"
-              className="text-secondary mx-3 text-decoration-none fw-bold mt-1"
+              className="text-secondary mx-3 text-decoration-none fw-bold my-1"
             >
               Login
             </NavLink>
@@ -68,7 +68,7 @@ const Navigation = () => {
             <NavLink to={"/signup"}>
               <Button variant=" rounded-pill fw-bold" style={{background:'rgb(125, 184, 37)'}}>Signup</Button>
             </NavLink>
-            <span className="text-light mt-2 mx-5">Signed in as: <span className="text-lightGreen fw-bold">{user?.email}</span></span>
+            <span className="text-light my-2 mx-5">Signed in as: <span className="text-lightGreen fw-bold">{user?.email}</span></span>
           </Nav>
         </Navbar.Collapse>
       </Container>
