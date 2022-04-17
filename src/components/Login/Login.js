@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { NavLink, useNavigate } from 'react-router-dom';
 import SocialLogin from '../SocialLogin/SocialLogin';
@@ -6,8 +6,7 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
 const Login = () => {
-  
-  const [
+   const [
     signInWithEmailAndPassword,
     user,
     loading,
@@ -20,6 +19,7 @@ const Login = () => {
     const email = event.target.email.value;
     const password = event.target.password.value;
     signInWithEmailAndPassword(email,password);
+    
     
   }
    if(user){

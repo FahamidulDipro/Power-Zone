@@ -1,29 +1,40 @@
 import React, { useState } from "react";
 import { Alert, Button, Form } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./Signup.css";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useUpdateProfile } from "react-firebase-hooks/auth";
+
 import auth from "../../firebase.init";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Signup = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+  const navigate = useNavigate();
   const [passwordMatchError, setpasswordMatchError] = useState("");
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const name = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
     const cpassword = event.target.cpassword.value;
     if (password === cpassword) {
-      createUserWithEmailAndPassword(email, password);
+      await createUserWithEmailAndPassword(email, password);
+      await updateProfile({ displayName: name });
+      console.log("updated profile");
+      navigate("/home");
     } else {
       setpasswordMatchError(
         <p className="text-danger fw-bold">Password didn't match</p>
       );
     }
   };
+  if (user) {
+    console.log(user);
+  }
   let displayError;
   if (error) {
     toast(" User Can't Be Created");
