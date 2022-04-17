@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
     return (
@@ -45,6 +46,7 @@ const Login = () => {
               Please Signup
             </NavLink>
           </p>
+          <SocialLogin></SocialLogin>
         </Form>
       </section>
     </div>
