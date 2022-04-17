@@ -18,20 +18,26 @@ const Signup = () => {
     const cpassword = event.target.cpassword.value;
     if (password === cpassword) {
       createUserWithEmailAndPassword(email, password);
-      toast("User Created!");
     } else {
       setpasswordMatchError(
         <p className="text-danger fw-bold">Password didn't match</p>
       );
     }
   };
-
+  let displayError;
+  if (error) {
+    toast(" User Can't Be Created");
+    displayError = <p className="text-danger">{error?.message}</p>;
+  } else {
+    toast("New User Created");
+  }
   return (
     <div
       className=" container d-flex justify-content-center"
       style={{ marginTop: "200px" }}
     >
-      <ToastContainer />{" "}
+      {user ? <ToastContainer /> : null}
+
       <section className="w-50">
         <h1 className="text-start mb-5 text-light">Please Signup</h1>
         <Form className="text-start" onSubmit={handleSubmit}>
@@ -50,6 +56,7 @@ const Signup = () => {
               placeholder="Email"
               className="border-0 shadow-lg p-3"
             />
+            {displayError}
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
