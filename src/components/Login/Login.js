@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import {
   useSendPasswordResetEmail,
@@ -30,7 +32,7 @@ const Login = () => {
   const resetPassword = async (event) => {
     const email = emailRef.current.value;
     await sendPasswordResetEmail(email);
-    alert("Password Reset Email Sent");
+    toast("Password Reset Email Sent");
   };
 
   let displayError;
@@ -39,6 +41,7 @@ const Login = () => {
   }
   return (
     <div className="mt-5">
+      <ToastContainer />
       <div
         className=" container d-flex justify-content-center"
         style={{ marginTop: "200px" }}
