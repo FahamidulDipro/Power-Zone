@@ -1,8 +1,11 @@
 import React from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { NavLink } from "react-router-dom";
+import auth from "../../firebase.init";
 
 const Navigation = () => {
+  const [user, loading, error] = useAuthState(auth);
   return (
     <Navbar
       collapseOnSelect
@@ -65,6 +68,7 @@ const Navigation = () => {
             <NavLink to={"/signup"}>
               <Button variant=" rounded-pill fw-bold" style={{background:'rgb(125, 184, 37)'}}>Signup</Button>
             </NavLink>
+            <span className="text-light mt-2 mx-5">Signed in as: <span className="text-lightGreen fw-bold">{user?.email}</span></span>
           </Nav>
         </Navbar.Collapse>
       </Container>

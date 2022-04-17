@@ -1,9 +1,35 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const Login = () => {
+  
+  const [
+    signInWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useSignInWithEmailAndPassword(auth);
+
+  const navigate = useNavigate();
+  const handleLogin = event =>{
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    signInWithEmailAndPassword(email,password);
+    
+  }
+   if(user){
+     navigate('/home');
+   }
+
+  let displayError;
+  if (error) {
+    displayError = <p className="text-danger">{error?.message}</p>;
+  }
     return (
         <div className='mt-5'>
          <div
@@ -12,22 +38,26 @@ const Login = () => {
     >
       <section className="w-50">
         <h1 className="text-start mb-5 text-light">Please Login</h1>
-        <Form className="text-start  ">
+        <Form className="text-start" onSubmit={handleLogin}>
          
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Control
               type="email"
+              name='email'
               placeholder="Email"
               className="border-0 shadow-lg p-3"
             />
           </Form.Group>
+          {displayError}
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Control
               type="password"
+              name='password'
               placeholder="Password"
               className="border-0 shadow-lg p-3"
             />
+            {displayError}
           </Form.Group>
         
           <Button
