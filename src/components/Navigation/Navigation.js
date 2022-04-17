@@ -43,6 +43,12 @@ const Navigation = () => {
               Checkout
             </NavLink>
             <NavLink
+              to="/blogs"
+              className="text-secondary mx-3 text-decoration-none fw-bold mt-1"
+            >
+              Blogs
+            </NavLink>
+            <NavLink
               to="/about"
               className="text-secondary mx-3 text-decoration-none fw-bold mt-1"
             >

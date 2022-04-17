@@ -1,9 +1,53 @@
 import React from 'react';
+import { Button, Form } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 const Login = () => {
     return (
         <div className='mt-5'>
-            <h1>Login</h1>
+         <div
+      className=" container d-flex justify-content-center"
+      style={{ marginTop: "200px" }}
+    >
+      <section className="w-50">
+        <h1 className="text-start mb-5 text-light">Please Login</h1>
+        <Form className="text-start  ">
+         
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Control
+              type="email"
+              placeholder="Email"
+              className="border-0 shadow-lg p-3"
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Control
+              type="password"
+              placeholder="Password"
+              className="border-0 shadow-lg p-3"
+            />
+          </Form.Group>
+        
+          <Button
+            variant="success"
+            type="submit"
+            className="w-100 p-3 fw-bold signup-btn "
+          >
+          Login
+          </Button>
+          <p className="fw-bold text-light confirmation mt-3">
+            Don't have an account?{" "}
+            <NavLink
+              className="text-success text-decoration-none"
+              to={"/signup"}
+            >
+              Please Signup
+            </NavLink>
+          </p>
+        </Form>
+      </section>
+    </div>
         </div>
     );
 };
