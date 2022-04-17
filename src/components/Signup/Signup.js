@@ -4,7 +4,8 @@ import { NavLink } from "react-router-dom";
 import "./Signup.css";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Signup = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
@@ -17,6 +18,7 @@ const Signup = () => {
     const cpassword = event.target.cpassword.value;
     if (password === cpassword) {
       createUserWithEmailAndPassword(email, password);
+      toast("User Created!");
     } else {
       setpasswordMatchError(
         <p className="text-danger fw-bold">Password didn't match</p>
@@ -29,7 +31,7 @@ const Signup = () => {
       className=" container d-flex justify-content-center"
       style={{ marginTop: "200px" }}
     >
-      {" "}
+      <ToastContainer />{" "}
       <section className="w-50">
         <h1 className="text-start mb-5 text-light">Please Signup</h1>
         <Form className="text-start" onSubmit={handleSubmit}>
