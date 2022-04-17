@@ -1,42 +1,42 @@
 [
   {
     "id": "625b1737b698241726798146",
-    "picture": "https://webbox.imgix.net/images/owvecfmxulwbfvxm/c56a0c0d-8454-431a-9b3e-f420c72e82e3.jpg",
-    "name": "Opal Chang",
+    "picture": "../images/trainer1.jpg",
+    "name": "Preston Clark",
     "price": 100,
     "detail": "How we dream about our future"
   },
   {
     "id": "625b17371fdffff83253e4a6",
-    "picture": "https://webbox.imgix.net/images/owvecfmxulwbfvxm/c56a0c0d-8454-431a-9b3e-f420c72e82e3.jpg",
+    "picture": "../images/trainer2.jpg",
     "name": "Campbell Freeman",
     "price": 100,
     "detail": "How we dream about our future"
   },
   {
     "id": "625b17376ec30617b202ff0b",
-    "picture": "https://webbox.imgix.net/images/owvecfmxulwbfvxm/c56a0c0d-8454-431a-9b3e-f420c72e82e3.jpg",
+    "picture": "../images/trainer3.jpg",
     "name": "Conway George",
     "price": 100,
     "detail": "How we dream about our future"
   },
   {
     "id": "625b1737fc429722d8a8c114",
-    "picture": "https://webbox.imgix.net/images/owvecfmxulwbfvxm/c56a0c0d-8454-431a-9b3e-f420c72e82e3.jpg",
+    "picture": "../images/trainer5.jpg",
     "name": "Marcella Morrison",
     "price": 100,
     "detail": "How we dream about our future"
   },
   {
     "id": "625b17376ef2988a8649665d",
-    "picture": "https://webbox.imgix.net/images/owvecfmxulwbfvxm/c56a0c0d-8454-431a-9b3e-f420c72e82e3.jpg",
+    "picture": "../images/trainer4.jpg",
     "name": "Jo Levine",
     "price": 100,
     "detail": "How we dream about our future"
   },
   {
     "id": "625b1737ec7626b0111613dc",
-    "picture": "https://webbox.imgix.net/images/owvecfmxulwbfvxm/c56a0c0d-8454-431a-9b3e-f420c72e82e3.jpg",
+    "picture": "../images/trainer6.jpg",
     "name": "Warner Huffman",
     "price": 100,
     "detail": "How we dream about our future"
