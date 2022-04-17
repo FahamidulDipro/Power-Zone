@@ -1,3 +1,4 @@
+import { signOut } from "firebase/auth";
 import React from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -5,7 +6,10 @@ import { NavLink } from "react-router-dom";
 import auth from "../../firebase.init";
 
 const Navigation = () => {
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth)
+  const logout = () => {
+    signOut(auth);
+  };
   return (
     <Navbar
       collapseOnSelect
@@ -58,7 +62,11 @@ const Navigation = () => {
             >
               About
             </NavLink>
-            <NavLink
+           {
+             user?<NavLink to={"/login"}>
+             <Button variant=" rounded-pill fw-bold" style={{background:'rgb(125, 184, 37)'}} onClick={logout}>Logout</Button>
+           </NavLink>:<>
+           <NavLink
               to="/login"
               className="text-secondary mx-3 text-decoration-none fw-bold my-1"
             >
@@ -67,8 +75,11 @@ const Navigation = () => {
 
             <NavLink to={"/signup"}>
               <Button variant=" rounded-pill fw-bold" style={{background:'rgb(125, 184, 37)'}}>Signup</Button>
-            </NavLink>
-            <span className="text-light my-2 mx-5">Signed in as: <span className="text-lightGreen fw-bold">{user?.email}</span></span>
+            </NavLink></>
+           } 
+           {
+             user?<span className="text-light my-2 mx-5">Signed in as: <span className="text-lightGreen fw-bold">{user?.email}</span></span>:null
+           } 
           </Nav>
         </Navbar.Collapse>
       </Container>
