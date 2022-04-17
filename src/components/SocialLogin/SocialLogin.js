@@ -1,15 +1,19 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
  
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from?.pathname||'/';
     const googleLogin = ()=>{
-        signInWithGoogle();
-        navigate('/home')
+        signInWithGoogle().then(()=>{
+            navigate(from,{replace: true});
+        });
+        
     }
     return (
         <div className='mt-5'>

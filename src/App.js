@@ -12,6 +12,7 @@ import Signup from "./components/Signup/Signup";
 import ServicesLoad from "./components/ServicesLoad/ServicesLoad";
 import NotFound from "./components/NotFound/NotFound";
 import Blogs from "./components/Blogs/Blogs";
+import RequireAuth from "./components/RequireAuth/RequireAuth";
 
 export const TrainerLoad = createContext();
 
@@ -37,7 +38,19 @@ function App() {
           <Route path="/signup" element={<Signup></Signup>}></Route>
           <Route
             path="/checkout/:trainerId"
-            element={<Checkout></Checkout>}
+            element={
+              <RequireAuth>
+                <Checkout></Checkout>
+              </RequireAuth>
+            }
+          ></Route>
+          <Route
+            path="/checkout"
+            element={
+              <RequireAuth>
+                <Checkout></Checkout>
+              </RequireAuth>
+            }
           ></Route>
           <Route path="/blogs" element={<Blogs></Blogs>}></Route>
           <Route path="*" element={<NotFound></NotFound>}></Route>

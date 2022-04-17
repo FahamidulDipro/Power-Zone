@@ -21,7 +21,7 @@ const Navigation = () => {
       <Container>
         <Navbar.Brand>
           <NavLink
-          style={{color:'rgb(125, 184, 37)',fontSize:'25px'}}
+            style={{ color: "rgb(125, 184, 37)", fontSize: "25px" }}
             className=" fw-bold text-decoration-none mx-4"
             to={"/"}
           >
@@ -38,7 +38,7 @@ const Navigation = () => {
             >
               Home
             </NavLink>
-          
+
             <NavLink
               to="/checkout"
               className="text-secondary mx-3 text-decoration-none fw-bold my-1"
@@ -57,32 +57,56 @@ const Navigation = () => {
             >
               About
             </NavLink>
-           {
-             user?<NavLink to={"/login"}>
-             <Button variant=" rounded-pill fw-bold" style={{background:'rgb(125, 184, 37)'}} onClick={logout}>Logout</Button>
-           </NavLink>:<>
-           <NavLink
-              to="/login"
-              className="text-secondary mx-3 text-decoration-none fw-bold my-1"
-            >
-              Login
-            </NavLink>
+            {user ? (
+              <NavLink to={"/login"}>
+                <Button
+                  variant=" rounded-pill fw-bold"
+                  style={{ background: "rgb(125, 184, 37)" }}
+                  onClick={logout}
+                >
+                  Logout
+                </Button>
+              </NavLink>
+            ) : (
+              <>
+                <NavLink
+                  to="/login"
+                  className="text-secondary mx-3 text-decoration-none fw-bold my-1"
+                >
+                  Login
+                </NavLink>
 
-            <NavLink to={"/signup"}>
-              <Button variant=" rounded-pill fw-bold" style={{background:'rgb(125, 184, 37)'}}>Signup</Button>
-            </NavLink></>
-           } 
-           {
-             user?<span className="text-light my-2 mx-5">Signed in as: <span className="text-lightGreen fw-bold">{user?.displayName}</span><span>
-               
-               
-               {
-                 user?.photoURL?<img src={user?.photoURL} alt="userImage" style={{width:'30px',borderRadius:'50%',marginLeft:'20px'}}/>:null
-               }
-               
-               
-               </span></span>:null
-           } 
+                <NavLink to={"/signup"}>
+                  <Button
+                    variant=" rounded-pill fw-bold"
+                    style={{ background: "rgb(125, 184, 37)" }}
+                  >
+                    Signup
+                  </Button>
+                </NavLink>
+              </>
+            )}
+            {user ? (
+              <span className="text-light my-2 mx-5">
+                Signed in as:{" "}
+                <span className="text-lightGreen fw-bold">
+                  {user?.displayName}
+                </span>
+                <span>
+                  {user?.photoURL ? (
+                    <img
+                      src={user?.photoURL}
+                      alt="userImage"
+                      style={{
+                        width: "30px",
+                        borderRadius: "50%",
+                        marginLeft: "20px",
+                      }}
+                    />
+                  ) : null}
+                </span>
+              </span>
+            ) : null}
           </Nav>
         </Navbar.Collapse>
       </Container>
