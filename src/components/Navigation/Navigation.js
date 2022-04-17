@@ -73,7 +73,15 @@ const Navigation = () => {
             </NavLink></>
            } 
            {
-             user?<span className="text-light my-2 mx-5">Signed in as: <span className="text-lightGreen fw-bold">{user?.displayName}</span></span>:null
+             user?<span className="text-light my-2 mx-5">Signed in as: <span className="text-lightGreen fw-bold">{user?.displayName}</span><span>
+               
+               
+               {
+                 user?.photoURL?<img src={user?.photoURL} alt="userImage" style={{width:'30px',borderRadius:'50%',marginLeft:'20px'}}/>:null
+               }
+               
+               
+               </span></span>:null
            } 
           </Nav>
         </Navbar.Collapse>
