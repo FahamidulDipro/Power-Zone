@@ -1,0 +1,14 @@
+.service-card {
+  box-shadow: 0 4px 8px 0 rgba(142, 246, 184, 0.096),
+    0 6px 20px 0 rgba(91, 226, 8, 0.294);
+  background-color: rgb(125, 184, 37);
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.text-lightGreen {
+  color: rgb(125, 184, 37) !important;
+}
+.bg-lightGreen {
+  background-color: rgb(125, 184, 37) !important;
+}

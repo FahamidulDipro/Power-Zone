@@ -6,16 +6,20 @@ const Checkout = () => {
   const trainers = useContext(TrainerLoad);
   const { trainerId } = useParams();
   const trainerDetail = trainers.find((trainer) => trainer.id === trainerId);
-  
+
   return (
     <div style={{ marginTop: "200px" }}>
       {trainerDetail ? (
         <section className="detail-section text-start border container mt-5 d-flex justify-content-between p-3 flex-lg-row flex-md-row flex-sm-column flex-column">
-          <div className='w-50'>
+          <div className="w-50 text-light">
             <h1>{trainerDetail?.name}</h1>
           </div>
-          <div className='w-50'>
-            <img src={trainerDetail?.picture} alt="trainerPicture" className='img-fluid'/>
+          <div className="w-50">
+            <img
+              src={trainerDetail?.picture}
+              alt="trainerPicture"
+              className="img-fluid"
+            />
           </div>
         </section>
       ) : (

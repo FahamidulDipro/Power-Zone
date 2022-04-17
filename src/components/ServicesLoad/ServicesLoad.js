@@ -6,7 +6,8 @@ import Service from "../../Service/Service";
 const ServicesLoad = () => {
   const trainers = useContext(TrainerLoad);
   return (
-    <div className="mt-5 container">
+    <div className="container" style={{ marginTop: "100px" }}>
+      <h1 className="text-light">Our Professional Trainers</h1>
       <Container fluid>
         <Row>
           {trainers.map((trainer) => (

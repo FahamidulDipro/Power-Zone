@@ -9,6 +9,10 @@ body {
 }
 .signup-btn {
   font-size: 25px !important;
+  border: none;
+}
+.signup-btn:hover {
+  background-color: rgba(125, 184, 37, 0.428) !important;
 }
 .confirmation {
   font-size: 25px;

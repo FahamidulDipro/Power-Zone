@@ -30,16 +30,16 @@ const Login = () => {
           </Form.Group>
         
           <Button
-            variant="success"
+           
             type="submit"
-            className="w-100 p-3 fw-bold signup-btn "
+            className="w-100 p-3 fw-bold signup-btn bg-lightGreen"
           >
           Login
           </Button>
           <p className="fw-bold text-light confirmation mt-3">
             Don't have an account?{" "}
             <NavLink
-              className="text-success text-decoration-none"
+              className="text-lightGreen text-decoration-none"
               to={"/signup"}
             >
               Please Signup

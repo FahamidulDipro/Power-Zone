@@ -14,7 +14,8 @@ const Navigation = () => {
       <Container>
         <Navbar.Brand>
           <NavLink
-            className="text-success fw-bold text-decoration-none"
+          style={{color:'rgb(125, 184, 37)',fontSize:'25px'}}
+            className=" fw-bold text-decoration-none mx-4"
             to={"/"}
           >
             Power Zone
@@ -62,7 +63,7 @@ const Navigation = () => {
             </NavLink>
 
             <NavLink to={"/signup"}>
-              <Button variant="success rounded-pill fw-bold">Signup</Button>
+              <Button variant=" rounded-pill fw-bold" style={{background:'rgb(125, 184, 37)'}}>Signup</Button>
             </NavLink>
           </Nav>
         </Navbar.Collapse>
