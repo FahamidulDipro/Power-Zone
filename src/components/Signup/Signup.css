@@ -8,12 +8,9 @@ body {
   background-attachment: fixed;
 }
 .signup-btn {
-  font-size: 25px !important;
+  font-size: 20px !important;
   border: none;
 }
 .signup-btn:hover {
   background-color: rgba(125, 184, 37, 0.428) !important;
-}
-.confirmation {
-  font-size: 25px;
 }
