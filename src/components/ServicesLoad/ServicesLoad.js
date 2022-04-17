@@ -7,7 +7,7 @@ const ServicesLoad = () => {
   const trainers = useContext(TrainerLoad);
   return (
     <div className="container" style={{ marginTop: "100px" }}>
-      <h1 className="text-light">Our Professional Trainers</h1>
+      <h1 className="text-light">Services I Provide</h1>
       <Container fluid>
         <Row>
           {trainers.map((trainer) => (

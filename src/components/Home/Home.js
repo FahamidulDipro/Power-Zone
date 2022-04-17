@@ -1,9 +1,10 @@
 import React from 'react';
+import ServicesLoad from '../ServicesLoad/ServicesLoad';
 
 const Home = () => {
     return (
         <div className='mt-5'>
-            <h1>Homepage</h1>
+           <ServicesLoad></ServicesLoad>
         </div>
     );
 };

@@ -2,43 +2,73 @@
   {
     "id": "625b1737b698241726798146",
     "picture": "../images/trainer1.jpg",
-    "name": "Preston Clark",
+    "name": "BODYBUILDING FOR BEGINNERS PROGRAM",
     "price": 100,
-    "detail": "How we dream about our future"
+    "detail": {
+      "duration": "4 weeks",
+      "fitnessLevel": "Beginners",
+      "workoutPerWeeks": "7 workouts"
+    },
+    "shortDescription": "If looking like The Hulk, Wolverine, or Batman is your primary goal, then a training program with a bodybuilding focus is what you need.To have a thick chest, you need to have a well-developed back. To have big legs, you need to train your hamstrings. To have shredded abs, you need to have enough muscle mass to make getting lean worth it."
   },
   {
     "id": "625b17371fdffff83253e4a6",
     "picture": "../images/trainer2.jpg",
-    "name": "Campbell Freeman",
+    "name": "THE BEST POWERLIFTING PROGRAM",
     "price": 100,
-    "detail": "How we dream about our future"
+    "detail": {
+      "duration": "10 weeks",
+      "fitnessLevel": "Beginners",
+      "workoutPerWeeks": "11 workouts"
+    },
+    "shortDescription": "It is a 10 weeks program built around developing skill and strength with the competition lifts, while also developing a base of muscularity to aid further strength development for a novice lifter."
   },
   {
     "id": "625b17376ec30617b202ff0b",
-    "picture": "../images/trainer3.jpg",
-    "name": "Conway George",
+    "picture": "../images/chinup.jpg",
+    "name": "THE ULTIMATE CHIN-UP WORKOUT",
     "price": 100,
-    "detail": "How we dream about our future"
+    "detail": {
+      "duration": "4 weeks",
+      "fitnessLevel": "Beginners",
+      "workoutPerWeeks": "7 workouts"
+    },
+    "shortDescription": "Chin-ups are hard, which is why most gym bros avoid doing them, well, at least with anything approaching good form. Most people stay the hell away from them and stick to the lat-pulldown machine instead. Their loss, don’t make it yours."
   },
   {
     "id": "625b1737fc429722d8a8c114",
     "picture": "../images/trainer5.jpg",
-    "name": "Marcella Morrison",
-    "price": 100,
-    "detail": "How we dream about our future"
+    "name": "5 DAYS DUMBBELL ONLY WORKOUT PROGRAM",
+    "price": 50,
+    "detail": {
+      "duration": "5 days",
+      "fitnessLevel": "Beginners",
+      "workoutPerWeeks": "4 workouts"
+    },
+    "shortDescription": "The program calls for you to work out 5 days per week. What days you decide to work out on are completely up to you. Just ensure that you incorporate 2 rest/active recovery days into your weekly schedule.The goal of the program is to help you build muscle. Of course, if you’d rather use it to help aid in fat loss, that is completely fine too. Just be sure to adjust your caloric intake accordingly."
   },
   {
     "id": "625b17376ef2988a8649665d",
-    "picture": "../images/trainer4.jpg",
-    "name": "Jo Levine",
-    "price": 100,
-    "detail": "How we dream about our future"
+    "picture": "../images/reversePyramid.jpg",
+    "name": "REVERSE PYRAMID TRAINING",
+    "price": 200,
+    "detail": {
+      "duration": "6 weeks",
+      "fitnessLevel": "Beginners",
+      "workoutPerWeeks": "5 workouts"
+    },
+    "shortDescription": "Let’s get down to the nitty gritty. The pyramid in Reverse Pyramid Training references pyramiding reps, a training technique popular among bodybuilders. A typical pyramid starts with lower loads and higher reps, progressing into higher loads and lower reps, thus finishing with the heaviest set."
   },
   {
     "id": "625b1737ec7626b0111613dc",
-    "picture": "../images/trainer6.jpg",
-    "name": "Warner Huffman",
-    "price": 100,
-    "detail": "How we dream about our future"
+    "picture": "../images/cardio.jpg",
+    "name": "CARDIO FOR CUTTING",
+    "price": 150,
+    "detail": {
+      "duration": "5 weeks",
+      "fitnessLevel": "Beginners",
+      "workoutPerWeeks": "6 workouts"
+    },
+    "shortDescription": "The program incorporate different types of cardio — jogging, biking, HIIT, swimming, etc for cutting. I change cardio training machines often at the gym. Different movements will be added to your HIIT workouts during the week to challenge different muscles and avoid injury brought on by muscle fatigue."
   }
 ]
