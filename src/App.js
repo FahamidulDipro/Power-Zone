@@ -14,6 +14,7 @@ import NotFound from "./components/NotFound/NotFound";
 import Blogs from "./components/Blogs/Blogs";
 import RequireAuth from "./components/RequireAuth/RequireAuth";
 
+// Using Context  to pass data to different components
 export const TrainerLoad = createContext();
 
 function App() {
@@ -39,19 +40,13 @@ function App() {
           <Route
             path="/checkout/:trainerId"
             element={
+              // Protected 'checkout' route
               <RequireAuth>
                 <Checkout></Checkout>
               </RequireAuth>
             }
           ></Route>
-          <Route
-            path="/checkout"
-            element={
-              <RequireAuth>
-                <Checkout></Checkout>
-              </RequireAuth>
-            }
-          ></Route>
+
           <Route path="/blogs" element={<Blogs></Blogs>}></Route>
           <Route path="*" element={<NotFound></NotFound>}></Route>
         </Routes>

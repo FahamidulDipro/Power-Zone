@@ -53,6 +53,7 @@ const Login = () => {
       >
         <section className="w-50">
           <h1 className="text-start mb-5 text-light">Please Login</h1>
+          {/* Login Form with 'Required' fields */}
           <Form className="text-start" onSubmit={handleLogin}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Control
@@ -60,7 +61,7 @@ const Login = () => {
                 name="email"
                 placeholder="Email"
                 className="border-0 shadow-lg p-3"
-                ref={emailRef}
+                ref={emailRef} required 
               />
             </Form.Group>
             {displayError}
@@ -70,7 +71,7 @@ const Login = () => {
                 type="password"
                 name="password"
                 placeholder="Password"
-                className="border-0 shadow-lg p-3"
+                className="border-0 shadow-lg p-3" required 
               />
               {displayError}
             </Form.Group>

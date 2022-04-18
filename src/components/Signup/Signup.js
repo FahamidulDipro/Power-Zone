@@ -51,13 +51,14 @@ const Signup = () => {
 
       <section className="w-50">
         <h1 className="text-start mb-5 text-light">Please Signup</h1>
+        {/* Signup Form with Required fields */}
         <Form className="text-start" onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicText">
             <Form.Control
               type="text"
               placeholder="Name"
               name="name"
-              className="border-0 shadow-lg p-3"
+              className="border-0 shadow-lg p-3" required 
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -65,7 +66,7 @@ const Signup = () => {
               type="email"
               name="email"
               placeholder="Email"
-              className="border-0 shadow-lg p-3"
+              className="border-0 shadow-lg p-3" required 
             />
             {displayError}
           </Form.Group>
@@ -75,15 +76,16 @@ const Signup = () => {
               type="password"
               name="password"
               placeholder="Password"
-              className="border-0 shadow-lg p-3"
+              className="border-0 shadow-lg p-3" required 
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicConfirmPassword">
+        
             <Form.Control
               type="password"
               name="cpassword"
               placeholder="Confirm Password"
-              className="border-0 shadow-lg p-3"
+              className="border-0 shadow-lg p-3" required 
             />
           </Form.Group>
           {passwordMatchError}
