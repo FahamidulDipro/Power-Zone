@@ -8,6 +8,7 @@ import { useUpdateProfile } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SocialLogin from "../SocialLogin/SocialLogin";
 const Signup = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
@@ -105,6 +106,7 @@ const Signup = () => {
             </NavLink>
           </p>
         </Form>
+        <SocialLogin></SocialLogin>
       </section>
     </div>
   );
