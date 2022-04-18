@@ -13,3 +13,5 @@
 - The web application also contains a blog page and about page for information
 
 ## Live Site Link
+
+https://power-zone-fd8c1.web.app/
