@@ -19,6 +19,7 @@ const Checkout = () => {
               <p style={{fontSize:'20px'}}><b style={{color:'rgb(125, 184, 37)'}}>Fitness Level: </b> {trainerDetail?.detail?.fitnessLevel}</p>
               <p style={{fontSize:'20px'}}><b style={{color:'rgb(125, 184, 37)'}}>Workout Per Week: </b> {trainerDetail?.detail?.workoutPerWeeks}</p>
               <p className="text-light mt-3 ">{trainerDetail?.shortDescription}</p>
+              <p className="display-4 fw-bold" style={{color:'rgb(125, 184, 37)'}}>${trainerDetail?.price}</p>
               <Button className="my-3 border-0 fw-bold" style={{backgroundColor:'rgb(125, 184, 37)',fontSize:'20px'}}>Checkout</Button>
             </div>
           </div>
