@@ -1,4 +1,4 @@
-# Trimmer Review
+# Power Zone
 
 - Power Zone is a personal fitness trainer SPA(Single Page Application) built with React
 - In this project React Router, React-firebase-hooks, React-bootstrap, font-awesome, Context api are used
