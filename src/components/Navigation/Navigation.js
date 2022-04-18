@@ -4,7 +4,7 @@ import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { NavLink } from "react-router-dom";
 import auth from "../../firebase.init";
-
+import './Navigation.css';
 const Navigation = () => {
   const [user] = useAuthState(auth);
   const logout = () => {
@@ -34,26 +34,26 @@ const Navigation = () => {
           <Nav>
             <NavLink
               to="/home"
-              className="text-secondary mx-3 text-decoration-none fw-bold my-1"
+              className={({isActive})=>isActive?'active-link':'link'}
             >
               Home
             </NavLink>
 
             <NavLink
               to="/checkout"
-              className="text-secondary mx-3 text-decoration-none fw-bold my-1"
+              className={({isActive})=>isActive?'active-link':'link'}
             >
               Checkout
             </NavLink>
             <NavLink
               to="/blogs"
-              className="text-secondary mx-3 text-decoration-none fw-bold my-1"
+              className={({isActive})=>isActive?'active-link':'link'}
             >
               Blogs
             </NavLink>
             <NavLink
               to="/about"
-              className="text-secondary mx-3 text-decoration-none fw-bold my-1"
+              className={({isActive})=>isActive?'active-link':'link'}
             >
               About
             </NavLink>
@@ -71,7 +71,7 @@ const Navigation = () => {
               <>
                 <NavLink
                   to="/login"
-                  className="text-secondary mx-3 text-decoration-none fw-bold my-1"
+                  className={({isActive})=>isActive?'active-link':'link'}
                 >
                   Login
                 </NavLink>
